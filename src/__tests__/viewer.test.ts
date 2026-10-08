@@ -1,7 +1,8 @@
 import assert from "node:assert/strict";
 import { describe, test } from "node:test";
 
-import { stripTerminalSequences, visibleWidth } from "@earendil-works/pi-tui";
+import { visibleWidth } from "@earendil-works/pi-tui";
+import { stripVTControlCharacters as stripTerminalSequences } from "node:util";
 
 import { createProjectionCheckpoint } from "../projection.ts";
 import { LIVE_CONTEXT_STATE, initialLiveContextState, type LiveContextState } from "../state.ts";

@@ -7,13 +7,13 @@ import {
 	type Theme,
 } from "@earendil-works/pi-coding-agent";
 import type { Component, TUI } from "@earendil-works/pi-tui";
+import { stripVTControlCharacters as stripTerminalSequences } from "node:util";
 import {
 	Input,
 	matchesKey,
 	type SettingItem,
 	SettingsList,
 	type SettingsListTheme,
-	stripTerminalSequences,
 	truncateToWidth,
 	visibleWidth,
 	wrapTextWithAnsi,
